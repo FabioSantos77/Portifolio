@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fabio | Portifolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navegacao">
+        <ul class="menu">
+            <li>
+                <a href="#inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="#sobre">Sobre</a>
+            </li>
+            <li>
+                <a href="#projetos">Projetos</a>
+            </li>
+            <li>
+                <a href="#contato">Contato</a>
+            </li>
+             <li>
+                <a href="#cursos">Cursos</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+        <div>
+            <img src="Fabio.png" alt="Foto de Fabio Santos" class="foto-perfil">
+            <h1>Fabio Santos</h1>
+            <p>Estudante de TI</p>
+        </div>
+    </main>
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p>
+               Meu nome é Fábio Santos, tenho 21 anos e moro em Bastos, SP. Atualmente sou Assistente de TI na empresa BRATAC SEDA e curso Sistemas de Informação na UNOESTE, em Presidente Prudente. Sou uma pessoa curiosa e apaixonada por tecnologia, sempre buscando aprender mais e colocar em prática o que estudo.
+
+               Conciliar trabalho e faculdade é um desafio, mas também uma motivação para evoluir e conquistar meu espaço na área de TI.
+
+               Meu objetivo é continuar me desenvolvendo profissionalmente e contribuir com soluções tecnológicas que realmente façam diferença no dia a dia das pessoas e das empresas.
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+            <div class="projetos-card">
+                <img src="Trabalho.png" alt="Projeto1" class="projeto-imagem">
+                <h3 class="info-projeto">Trabalho em C</h3>
+                <p class="paragrafo-projetos">Sistema Locadora</p>
+            </div>
+
+            <div class="projetos-card">
+                <img src="Coding.png" alt="Projeto1" class="projeto-imagem">
+                <h3 class="info-projeto">Coding...</h3>
+                <p class="paragrafo-projetos">EM BREVE...</p>
+            </div>
+
+            <div class="projetos-card">
+                <img src="Coding.png" alt="Projeto1" class="projeto-imagem">
+                <h3 class="info-projeto">Coding...</h3>
+                <p class="paragrafo-projetos">EM BREVE...</p>
+            </div>
+        </div>
+    
+    </section>
+    
+<section id="cursos" class="cursos">
+  <h2 class="cursos-titulo">Meus Cursos</h2>
+  <div class="cursos-caixa">
+    <div class="cursos-card">
+      <img src="Tecnico em TI.jpeg" alt="Curso de HTML" class="cursos-imagem">
+      <h3 class="info-curso">Tecnico em Informatica</h3>
+      <p class="paragrafo-curso">Redes, hardwares, manutenção</p>
+    </div>
+
+    <div class="cursos-card">
+      <img src="Cloud.jpeg" alt="Curso de JavaScript" class="cursos-imagem">
+      <h3 class="info-curso">Implantação de Serviços em Nuvem</h3>
+      <p class="paragrafo-curso">Google Cloud Fundations</p>
+    </div>
+
+    <div class="cursos-card">
+      <img src="React.jpeg" alt="Curso de Python" class="cursos-imagem">
+      <h3 class="info-curso">ReactJS</h3>
+      <p class="paragrafo-curso">HTML, CSS, JavaScript</p>
+    </div>
+
+    <div class="cursos-card">
+      <img src="Algoritmos.jpeg" alt="Curso de Redes" class="cursos-imagem">
+      <h3 class="info-curso">Algoritmos e Logica de Programação</h3>
+      <p class="paragrafo-curso">Linguagem C e C++</p>
+    </div>
+  </div>
+</section>
+
+
+    <section id="contato" class="contato">
+  <h2>Entre em Contato</h2>
+
+  <form id="form-contato">
+    <input type="text" id="nome" placeholder="Seu Nome" required>
+    <textarea id="mensagem" rows="4" placeholder="Sua Mensagem" required></textarea>
+    <button type="submit">Enviar via WhatsApp</button>
+  </form>
+</section>
+
+
+
+<script>
+  document.getElementById("form-contato").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const mensagem = document.getElementById("mensagem").value;
+    const texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+    const numero = "5514998673974"; // seu número com DDI +55
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    window.open(url, "_blank");
+  });
+</script>
+
+</body>
+</html>
